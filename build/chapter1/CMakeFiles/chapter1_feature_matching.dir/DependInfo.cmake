@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hange/Learn/BasicAlgorithmTest/chapter1_feature_matching.cpp" "/home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles/chapter1_feature_matching.dir/chapter1_feature_matching.cpp.o"
+  "/home/hange/Learn/BasicAlgorithmTest/chapter1/chapter1_feature_matching.cpp" "/home/hange/Learn/BasicAlgorithmTest/build/chapter1/CMakeFiles/chapter1_feature_matching.dir/chapter1_feature_matching.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

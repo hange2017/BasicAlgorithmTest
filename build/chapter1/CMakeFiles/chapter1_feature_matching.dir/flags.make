@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/include/opencv4 
+CXX_INCLUDES = -isystem /usr/local/include/opencv4 
 
