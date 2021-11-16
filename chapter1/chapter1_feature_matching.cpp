@@ -54,7 +54,7 @@ void my_mutual_lowe_ratio_matching(Mat& src1,Mat& src2,vector<KeyPoint>& keypoin
     vector<DMatch> mutual_loweratio_matches;
     for(int i=0;i<knn_matches1.size();i++){
         if(knn_matches2[knn_matches1[i][0].trainIdx ][0].trainIdx == i){
-            if(knn_matches1[i][0].distance/knn_matches1[i][1].distance<0.75f ){
+            if(knn_matches1[i][0].distance/knn_matches1[i][1].distance<0.7f ){
                 mutual_loweratio_matches.push_back(knn_matches1[i][0]);
             }
         }
@@ -83,7 +83,7 @@ int main(int argc,char** argv){
 
     //keypoint detect
     int key_point_num=1000;
-    Ptr<ORB> detector=ORB::create(key_point_num,1.2,5);
+    Ptr<SIFT> detector=SIFT::create(key_point_num,3);
     vector<KeyPoint> keypoint1,keypoint2;
     detector->detect(src1,keypoint1);
     detector->detect(src2,keypoint2);
@@ -99,7 +99,7 @@ int main(int argc,char** argv){
 
     //ORB检测更快,但是sift更稳，而且做最近邻和次近邻比值好设置
     //经过测试发现这种特征点效果比直接的sift特征点匹配效果更好
-    Ptr<SIFT> detector_sift=SIFT::create(key_point_num,4);
+    Ptr<SIFT> detector_sift=SIFT::create(key_point_num,3);
     my_mutual_lowe_ratio_matching<SIFT>(src1,src2,keypoint1,keypoint2,detector_sift,"SIFT ",DescriptorMatcher::BRUTEFORCE);//DescriptorMatcher::BRUTEFORCE
 
     destroyAllWindows();
