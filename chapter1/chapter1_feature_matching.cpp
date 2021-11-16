@@ -62,6 +62,7 @@ void my_mutual_lowe_ratio_matching(Mat& src1,Mat& src2,vector<KeyPoint>& keypoin
     cv::Mat mutual_lowe_img;
     drawMatches(src1,keypoint1,src2,keypoint2,mutual_loweratio_matches,mutual_lowe_img,cv::Scalar(0,0,255));
     imshow(windname_pre+"mutual lowe ratio matches",mutual_lowe_img);
+    imwrite("/home/hange/Learn/BasicAlgorithmTest/build/chapter1/feature_matching.jpg",mutual_lowe_img);
     waitKey(0);
 
     return;
@@ -82,7 +83,7 @@ int main(int argc,char** argv){
 
     //keypoint detect
     int key_point_num=1000;
-    Ptr<ORB> detector=ORB::create(key_point_num,1.2,4);
+    Ptr<ORB> detector=ORB::create(key_point_num,1.2,5);
     vector<KeyPoint> keypoint1,keypoint2;
     detector->detect(src1,keypoint1);
     detector->detect(src2,keypoint2);
