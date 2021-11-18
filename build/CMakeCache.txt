@@ -216,10 +216,16 @@ Eigen3_DIR:PATH=/usr/lib/cmake/eigen3
 OpenCV_DIR:PATH=/usr/local/lib/cmake/opencv4
 
 //Value Computed by CMake
-chapter1_feature_matching_BINARY_DIR:STATIC=/home/hange/Learn/BasicAlgorithmTest/build/chapter1
+chapter1_feature_matching_BINARY_DIR:STATIC=/home/hange/Learn/BasicAlgorithmTest/build
 
 //Value Computed by CMake
-chapter1_feature_matching_SOURCE_DIR:STATIC=/home/hange/Learn/BasicAlgorithmTest/chapter1
+chapter1_feature_matching_SOURCE_DIR:STATIC=/home/hange/Learn/BasicAlgorithmTest
+
+//Value Computed by CMake
+chapter1_total_BINARY_DIR:STATIC=/home/hange/Learn/BasicAlgorithmTest/build/chapter1
+
+//Value Computed by CMake
+chapter1_total_SOURCE_DIR:STATIC=/home/hange/Learn/BasicAlgorithmTest/chapter1
 
 
 ########################

@@ -111,46 +111,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-chapter1/CMakeFiles/chapter1_feature_matching.dir/rule:
-	cd /home/hange/Learn/BasicAlgorithmTest/build && $(MAKE) -f CMakeFiles/Makefile2 chapter1/CMakeFiles/chapter1_feature_matching.dir/rule
-.PHONY : chapter1/CMakeFiles/chapter1_feature_matching.dir/rule
+chapter1/CMakeFiles/chapter1_total.dir/rule:
+	cd /home/hange/Learn/BasicAlgorithmTest/build && $(MAKE) -f CMakeFiles/Makefile2 chapter1/CMakeFiles/chapter1_total.dir/rule
+.PHONY : chapter1/CMakeFiles/chapter1_total.dir/rule
 
 # Convenience name for target.
-chapter1_feature_matching: chapter1/CMakeFiles/chapter1_feature_matching.dir/rule
+chapter1_total: chapter1/CMakeFiles/chapter1_total.dir/rule
 
-.PHONY : chapter1_feature_matching
+.PHONY : chapter1_total
 
 # fast build rule for target.
-chapter1_feature_matching/fast:
-	cd /home/hange/Learn/BasicAlgorithmTest/build && $(MAKE) -f chapter1/CMakeFiles/chapter1_feature_matching.dir/build.make chapter1/CMakeFiles/chapter1_feature_matching.dir/build
-.PHONY : chapter1_feature_matching/fast
+chapter1_total/fast:
+	cd /home/hange/Learn/BasicAlgorithmTest/build && $(MAKE) -f chapter1/CMakeFiles/chapter1_total.dir/build.make chapter1/CMakeFiles/chapter1_total.dir/build
+.PHONY : chapter1_total/fast
 
-chapter1_feature_matching.o: chapter1_feature_matching.cpp.o
+chapter1_total.o: chapter1_total.cpp.o
 
-.PHONY : chapter1_feature_matching.o
+.PHONY : chapter1_total.o
 
 # target to build an object file
-chapter1_feature_matching.cpp.o:
-	cd /home/hange/Learn/BasicAlgorithmTest/build && $(MAKE) -f chapter1/CMakeFiles/chapter1_feature_matching.dir/build.make chapter1/CMakeFiles/chapter1_feature_matching.dir/chapter1_feature_matching.cpp.o
-.PHONY : chapter1_feature_matching.cpp.o
+chapter1_total.cpp.o:
+	cd /home/hange/Learn/BasicAlgorithmTest/build && $(MAKE) -f chapter1/CMakeFiles/chapter1_total.dir/build.make chapter1/CMakeFiles/chapter1_total.dir/chapter1_total.cpp.o
+.PHONY : chapter1_total.cpp.o
 
-chapter1_feature_matching.i: chapter1_feature_matching.cpp.i
+chapter1_total.i: chapter1_total.cpp.i
 
-.PHONY : chapter1_feature_matching.i
+.PHONY : chapter1_total.i
 
 # target to preprocess a source file
-chapter1_feature_matching.cpp.i:
-	cd /home/hange/Learn/BasicAlgorithmTest/build && $(MAKE) -f chapter1/CMakeFiles/chapter1_feature_matching.dir/build.make chapter1/CMakeFiles/chapter1_feature_matching.dir/chapter1_feature_matching.cpp.i
-.PHONY : chapter1_feature_matching.cpp.i
+chapter1_total.cpp.i:
+	cd /home/hange/Learn/BasicAlgorithmTest/build && $(MAKE) -f chapter1/CMakeFiles/chapter1_total.dir/build.make chapter1/CMakeFiles/chapter1_total.dir/chapter1_total.cpp.i
+.PHONY : chapter1_total.cpp.i
 
-chapter1_feature_matching.s: chapter1_feature_matching.cpp.s
+chapter1_total.s: chapter1_total.cpp.s
 
-.PHONY : chapter1_feature_matching.s
+.PHONY : chapter1_total.s
 
 # target to generate assembly for a file
-chapter1_feature_matching.cpp.s:
-	cd /home/hange/Learn/BasicAlgorithmTest/build && $(MAKE) -f chapter1/CMakeFiles/chapter1_feature_matching.dir/build.make chapter1/CMakeFiles/chapter1_feature_matching.dir/chapter1_feature_matching.cpp.s
-.PHONY : chapter1_feature_matching.cpp.s
+chapter1_total.cpp.s:
+	cd /home/hange/Learn/BasicAlgorithmTest/build && $(MAKE) -f chapter1/CMakeFiles/chapter1_total.dir/build.make chapter1/CMakeFiles/chapter1_total.dir/chapter1_total.cpp.s
+.PHONY : chapter1_total.cpp.s
 
 # Help Target
 help:
@@ -160,10 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... chapter1_feature_matching"
-	@echo "... chapter1_feature_matching.o"
-	@echo "... chapter1_feature_matching.i"
-	@echo "... chapter1_feature_matching.s"
+	@echo "... chapter1_total"
+	@echo "... chapter1_total.o"
+	@echo "... chapter1_total.i"
+	@echo "... chapter1_total.s"
 .PHONY : help
 
 

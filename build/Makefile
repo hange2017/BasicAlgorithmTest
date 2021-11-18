@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named chapter1_feature_matching
+# Target rules for targets named chapter1_total
 
 # Build rule for target.
-chapter1_feature_matching: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 chapter1_feature_matching
-.PHONY : chapter1_feature_matching
+chapter1_total: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chapter1_total
+.PHONY : chapter1_total
 
 # fast build rule for target.
-chapter1_feature_matching/fast:
-	$(MAKE) -f chapter1/CMakeFiles/chapter1_feature_matching.dir/build.make chapter1/CMakeFiles/chapter1_feature_matching.dir/build
-.PHONY : chapter1_feature_matching/fast
+chapter1_total/fast:
+	$(MAKE) -f chapter1/CMakeFiles/chapter1_total.dir/build.make chapter1/CMakeFiles/chapter1_total.dir/build
+.PHONY : chapter1_total/fast
 
 # Help Target
 help:
@@ -131,7 +131,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... chapter1_feature_matching"
+	@echo "... chapter1_total"
 .PHONY : help
 
 

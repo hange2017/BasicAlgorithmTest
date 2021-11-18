@@ -71,7 +71,7 @@ clean: chapter1/clean
 # Directory level rules for directory chapter1
 
 # Recursive "all" directory target.
-chapter1/all: chapter1/CMakeFiles/chapter1_feature_matching.dir/all
+chapter1/all: chapter1/CMakeFiles/chapter1_total.dir/all
 
 .PHONY : chapter1/all
 
@@ -81,36 +81,36 @@ chapter1/preinstall:
 .PHONY : chapter1/preinstall
 
 # Recursive "clean" directory target.
-chapter1/clean: chapter1/CMakeFiles/chapter1_feature_matching.dir/clean
+chapter1/clean: chapter1/CMakeFiles/chapter1_total.dir/clean
 
 .PHONY : chapter1/clean
 
 #=============================================================================
-# Target rules for target chapter1/CMakeFiles/chapter1_feature_matching.dir
+# Target rules for target chapter1/CMakeFiles/chapter1_total.dir
 
 # All Build rule for target.
-chapter1/CMakeFiles/chapter1_feature_matching.dir/all:
-	$(MAKE) -f chapter1/CMakeFiles/chapter1_feature_matching.dir/build.make chapter1/CMakeFiles/chapter1_feature_matching.dir/depend
-	$(MAKE) -f chapter1/CMakeFiles/chapter1_feature_matching.dir/build.make chapter1/CMakeFiles/chapter1_feature_matching.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles --progress-num=1,2 "Built target chapter1_feature_matching"
-.PHONY : chapter1/CMakeFiles/chapter1_feature_matching.dir/all
+chapter1/CMakeFiles/chapter1_total.dir/all:
+	$(MAKE) -f chapter1/CMakeFiles/chapter1_total.dir/build.make chapter1/CMakeFiles/chapter1_total.dir/depend
+	$(MAKE) -f chapter1/CMakeFiles/chapter1_total.dir/build.make chapter1/CMakeFiles/chapter1_total.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles --progress-num=1,2 "Built target chapter1_total"
+.PHONY : chapter1/CMakeFiles/chapter1_total.dir/all
 
 # Build rule for subdir invocation for target.
-chapter1/CMakeFiles/chapter1_feature_matching.dir/rule: cmake_check_build_system
+chapter1/CMakeFiles/chapter1_total.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 chapter1/CMakeFiles/chapter1_feature_matching.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 chapter1/CMakeFiles/chapter1_total.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles 0
-.PHONY : chapter1/CMakeFiles/chapter1_feature_matching.dir/rule
+.PHONY : chapter1/CMakeFiles/chapter1_total.dir/rule
 
 # Convenience name for target.
-chapter1_feature_matching: chapter1/CMakeFiles/chapter1_feature_matching.dir/rule
+chapter1_total: chapter1/CMakeFiles/chapter1_total.dir/rule
 
-.PHONY : chapter1_feature_matching
+.PHONY : chapter1_total
 
 # clean rule for target.
-chapter1/CMakeFiles/chapter1_feature_matching.dir/clean:
-	$(MAKE) -f chapter1/CMakeFiles/chapter1_feature_matching.dir/build.make chapter1/CMakeFiles/chapter1_feature_matching.dir/clean
-.PHONY : chapter1/CMakeFiles/chapter1_feature_matching.dir/clean
+chapter1/CMakeFiles/chapter1_total.dir/clean:
+	$(MAKE) -f chapter1/CMakeFiles/chapter1_total.dir/build.make chapter1/CMakeFiles/chapter1_total.dir/clean
+.PHONY : chapter1/CMakeFiles/chapter1_total.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
