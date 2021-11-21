@@ -20,6 +20,7 @@ using namespace Eigen;
 
 #define sfm_course
 //#define cv_compare
+//#define reconstruct   //是否对F矩阵和E矩阵做重构
 
 //feature matches
 template<class T>
@@ -117,8 +118,10 @@ Eigen::MatrixXf ComputeFundmentalMatrix(vector<KeyPoint>& keypoint1,vector<KeyPo
     S_f(1,1) = svd_f.singularValues()(1);
     //S_f(2,2) = svd_f.singularValues()(2);
     cout<<"f singularvalues:\n"<<svd_f.singularValues()<<endl;
+#ifdef reconstruct
     F = U_f*S_f*V_f.transpose();
     cout<<"F:\n"<<F<<endl;
+#endif
     
     //opencv 算出的F矩阵
     vector<Point2f> keypoint1_2f,keypoint2_2f;
@@ -137,7 +140,7 @@ Eigen::MatrixXf ComputeFundmentalMatrix(vector<KeyPoint>& keypoint1,vector<KeyPo
 #ifdef sfm_course
     cv::Mat F_cv = findFundamentalMat(keypoint1_2f,keypoint2_2f,FM_8POINT);
 #else
-    cv::Mat F_cv = findFundamentalMat(keypoint1_2f,keypoint2_2f,FM_RANSAC);
+    cv::Mat F_cv = findFundamentalMat(keypoint1_2f,keypoint2_2f,FM_RANSAC);//
 #endif
     cout<<"opencv F_cv:\n"<<F_cv<<endl;
     F = (F_cv.at<double>(2,2)/F(2,2))*F;
@@ -159,7 +162,7 @@ Eigen::MatrixXf ComputeFundmentalMatrix(vector<KeyPoint>& keypoint1,vector<KeyPo
 
 //F+K to compute E matrix
 Eigen::MatrixXf ComputeEssentialMatrix(Eigen::MatrixXf& F,Eigen::MatrixXf& K,
-        vector<cv::KeyPoint>& keypoint1,vector<cv::KeyPoint>& keypoint2){
+        vector<cv::KeyPoint>& keypoint1,vector<cv::KeyPoint>& keypoint2,cv::Mat& E_cv){
     cout<<"ComputeEssentialMatrix"<<endl;
 
     //E = K^T*F*K
@@ -177,18 +180,19 @@ Eigen::MatrixXf ComputeEssentialMatrix(Eigen::MatrixXf& F,Eigen::MatrixXf& K,
     S_E(0,0) = (sig_value(0)+sig_value(1))/2.0;
     S_E(1,1) = (sig_value(0)+sig_value(1))/2.0;
     S_E(2,2) = 0.0;
+#ifdef reconstruct
     E = U_E*S_E*V_E.transpose();
     cout<<"E:\n"<<E<<endl;
+#endif
 
     //OpenCV compute E
 #ifdef sfm_course
     Point2f principal_point(0,0);
     double focal_length=1;
 #else
-    Point2f principal_point(325.1,249.7);
-    double focal_length=521;
+    Point2f principal_point(K(0,2),K(1,2));
+    double focal_length=K(0,0);
 #endif
-    Mat E_cv;
     vector<Point2f> keypoint1_pf,keypoint2_pf;
     for(int  i=0;i<keypoint1.size();i++){
         Point2f tmp;
@@ -253,7 +257,7 @@ bool  mycheck_R_t(Eigen::VectorXf& P,Eigen::MatrixXf& R,Eigen::VectorXf& t){
 
 
 //decompose E ==>R,t
-void ComputeR_T(Eigen::MatrixXf& E,vector<KeyPoint>& keypoint1,vector<KeyPoint>& keypoint2,Eigen::MatrixXf& K){
+void ComputeR_T(Eigen::MatrixXf& E,vector<KeyPoint>& keypoint1,vector<KeyPoint>& keypoint2,Eigen::MatrixXf& K,cv::Mat& E_cv){
 
     cout<<"ComputeR_T\n"<<endl;
 
@@ -314,8 +318,8 @@ void ComputeR_T(Eigen::MatrixXf& E,vector<KeyPoint>& keypoint1,vector<KeyPoint>&
              <<"0.0796625 0.99498 0.0605768\n";
 #endif
     //opencv compute R t
-    Point2d principal_point(325.1,249.7);
-    double focal_length=521;
+    Point2d principal_point(K(0,2),K(1,2));
+    double focal_length=K(0,0);
 #ifdef sfm_course
     principal_point = Point2d(0,0);
     focal_length=1;
@@ -327,7 +331,7 @@ void ComputeR_T(Eigen::MatrixXf& E,vector<KeyPoint>& keypoint1,vector<KeyPoint>&
         keypoint2_pf.push_back(Point2f(keypoint2[i].pt.x,keypoint2[i].pt.y) );
     }
 
-    cv::Mat E_cv=(cv::Mat_<double>(3,3)<<E(0,0),E(0,1),E(0,2),E(1,0),E(1,1),E(1,2),E(2,0),E(2,1),E(2,2));
+    //cv::Mat E_cv=(cv::Mat_<double>(3,3)<<E(0,0),E(0,1),E(0,2),E(1,0),E(1,1),E(1,2),E(2,0),E(2,1),E(2,2));
     //eigen2cv(E,E_cv);
     recoverPose(E_cv,keypoint1_pf,keypoint2_pf,R,t,focal_length,principal_point);
     cout<<"cv R:\n"<<R<<endl;
@@ -448,9 +452,10 @@ int main(int argc,char** argv){
     float f=0.972222208;
     K<<f,0,0,0,f,0,0,0,1;
 #endif
-    Eigen::MatrixXf E = ComputeEssentialMatrix(F,K,keypoint1_match,keypoint2_match);
+    cv::Mat E_cv;
+    Eigen::MatrixXf E = ComputeEssentialMatrix(F,K,keypoint1_match,keypoint2_match,E_cv);
 
-    ComputeR_T(E,keypoint1_match,keypoint2_match,K);
+    ComputeR_T(E,keypoint1_match,keypoint2_match,K,E_cv);
 
 
 
