@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/chapter2_g2o_curve_fitting.dir/chapter2_g2o_curve_fitting.cpp.o  -o chapter2_g2o_curve_fitting  -lg2o_core -lg2o_solver_dense -lglog -lg2o_stuff 

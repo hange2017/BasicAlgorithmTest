@@ -3,3 +3,11 @@
 /home/hange/Learn/BasicAlgorithmTest/build/chapter1/CMakeFiles/rebuild_cache.dir
 /home/hange/Learn/BasicAlgorithmTest/build/chapter1/CMakeFiles/edit_cache.dir
 /home/hange/Learn/BasicAlgorithmTest/build/chapter1/CMakeFiles/chapter1_total.dir
+/home/hange/Learn/BasicAlgorithmTest/build/chapter2/CMakeFiles/rebuild_cache.dir
+/home/hange/Learn/BasicAlgorithmTest/build/chapter2/CMakeFiles/edit_cache.dir
+/home/hange/Learn/BasicAlgorithmTest/build/chapter2/CMakeFiles/chapter2_g2o_BA.dir
+/home/hange/Learn/BasicAlgorithmTest/build/chapter2/CMakeFiles/chapter2_iter.dir
+/home/hange/Learn/BasicAlgorithmTest/build/chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir
+/home/hange/Learn/BasicAlgorithmTest/build/chapter3/CMakeFiles/rebuild_cache.dir
+/home/hange/Learn/BasicAlgorithmTest/build/chapter3/CMakeFiles/edit_cache.dir
+/home/hange/Learn/BasicAlgorithmTest/build/chapter3/CMakeFiles/check_rslt.dir

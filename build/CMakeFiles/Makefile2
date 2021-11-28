@@ -54,16 +54,22 @@ CMAKE_BINARY_DIR = /home/hange/Learn/BasicAlgorithmTest/build
 
 # The main recursive "all" target.
 all: chapter1/all
+all: chapter2/all
+all: chapter3/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: chapter1/preinstall
+preinstall: chapter2/preinstall
+preinstall: chapter3/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: chapter1/clean
+clean: chapter2/clean
+clean: chapter3/clean
 
 .PHONY : clean
 
@@ -84,6 +90,46 @@ chapter1/preinstall:
 chapter1/clean: chapter1/CMakeFiles/chapter1_total.dir/clean
 
 .PHONY : chapter1/clean
+
+#=============================================================================
+# Directory level rules for directory chapter2
+
+# Recursive "all" directory target.
+chapter2/all: chapter2/CMakeFiles/chapter2_g2o_BA.dir/all
+chapter2/all: chapter2/CMakeFiles/chapter2_iter.dir/all
+chapter2/all: chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/all
+
+.PHONY : chapter2/all
+
+# Recursive "preinstall" directory target.
+chapter2/preinstall:
+
+.PHONY : chapter2/preinstall
+
+# Recursive "clean" directory target.
+chapter2/clean: chapter2/CMakeFiles/chapter2_g2o_BA.dir/clean
+chapter2/clean: chapter2/CMakeFiles/chapter2_iter.dir/clean
+chapter2/clean: chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/clean
+
+.PHONY : chapter2/clean
+
+#=============================================================================
+# Directory level rules for directory chapter3
+
+# Recursive "all" directory target.
+chapter3/all: chapter3/CMakeFiles/check_rslt.dir/all
+
+.PHONY : chapter3/all
+
+# Recursive "preinstall" directory target.
+chapter3/preinstall:
+
+.PHONY : chapter3/preinstall
+
+# Recursive "clean" directory target.
+chapter3/clean: chapter3/CMakeFiles/check_rslt.dir/clean
+
+.PHONY : chapter3/clean
 
 #=============================================================================
 # Target rules for target chapter1/CMakeFiles/chapter1_total.dir
@@ -111,6 +157,114 @@ chapter1_total: chapter1/CMakeFiles/chapter1_total.dir/rule
 chapter1/CMakeFiles/chapter1_total.dir/clean:
 	$(MAKE) -f chapter1/CMakeFiles/chapter1_total.dir/build.make chapter1/CMakeFiles/chapter1_total.dir/clean
 .PHONY : chapter1/CMakeFiles/chapter1_total.dir/clean
+
+#=============================================================================
+# Target rules for target chapter2/CMakeFiles/chapter2_g2o_BA.dir
+
+# All Build rule for target.
+chapter2/CMakeFiles/chapter2_g2o_BA.dir/all:
+	$(MAKE) -f chapter2/CMakeFiles/chapter2_g2o_BA.dir/build.make chapter2/CMakeFiles/chapter2_g2o_BA.dir/depend
+	$(MAKE) -f chapter2/CMakeFiles/chapter2_g2o_BA.dir/build.make chapter2/CMakeFiles/chapter2_g2o_BA.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles --progress-num=3,4 "Built target chapter2_g2o_BA"
+.PHONY : chapter2/CMakeFiles/chapter2_g2o_BA.dir/all
+
+# Build rule for subdir invocation for target.
+chapter2/CMakeFiles/chapter2_g2o_BA.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 chapter2/CMakeFiles/chapter2_g2o_BA.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles 0
+.PHONY : chapter2/CMakeFiles/chapter2_g2o_BA.dir/rule
+
+# Convenience name for target.
+chapter2_g2o_BA: chapter2/CMakeFiles/chapter2_g2o_BA.dir/rule
+
+.PHONY : chapter2_g2o_BA
+
+# clean rule for target.
+chapter2/CMakeFiles/chapter2_g2o_BA.dir/clean:
+	$(MAKE) -f chapter2/CMakeFiles/chapter2_g2o_BA.dir/build.make chapter2/CMakeFiles/chapter2_g2o_BA.dir/clean
+.PHONY : chapter2/CMakeFiles/chapter2_g2o_BA.dir/clean
+
+#=============================================================================
+# Target rules for target chapter2/CMakeFiles/chapter2_iter.dir
+
+# All Build rule for target.
+chapter2/CMakeFiles/chapter2_iter.dir/all:
+	$(MAKE) -f chapter2/CMakeFiles/chapter2_iter.dir/build.make chapter2/CMakeFiles/chapter2_iter.dir/depend
+	$(MAKE) -f chapter2/CMakeFiles/chapter2_iter.dir/build.make chapter2/CMakeFiles/chapter2_iter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles --progress-num=7,8 "Built target chapter2_iter"
+.PHONY : chapter2/CMakeFiles/chapter2_iter.dir/all
+
+# Build rule for subdir invocation for target.
+chapter2/CMakeFiles/chapter2_iter.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 chapter2/CMakeFiles/chapter2_iter.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles 0
+.PHONY : chapter2/CMakeFiles/chapter2_iter.dir/rule
+
+# Convenience name for target.
+chapter2_iter: chapter2/CMakeFiles/chapter2_iter.dir/rule
+
+.PHONY : chapter2_iter
+
+# clean rule for target.
+chapter2/CMakeFiles/chapter2_iter.dir/clean:
+	$(MAKE) -f chapter2/CMakeFiles/chapter2_iter.dir/build.make chapter2/CMakeFiles/chapter2_iter.dir/clean
+.PHONY : chapter2/CMakeFiles/chapter2_iter.dir/clean
+
+#=============================================================================
+# Target rules for target chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir
+
+# All Build rule for target.
+chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/all:
+	$(MAKE) -f chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/build.make chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/depend
+	$(MAKE) -f chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/build.make chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles --progress-num=5,6 "Built target chapter2_g2o_curve_fitting"
+.PHONY : chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/all
+
+# Build rule for subdir invocation for target.
+chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles 0
+.PHONY : chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/rule
+
+# Convenience name for target.
+chapter2_g2o_curve_fitting: chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/rule
+
+.PHONY : chapter2_g2o_curve_fitting
+
+# clean rule for target.
+chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/clean:
+	$(MAKE) -f chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/build.make chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/clean
+.PHONY : chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/clean
+
+#=============================================================================
+# Target rules for target chapter3/CMakeFiles/check_rslt.dir
+
+# All Build rule for target.
+chapter3/CMakeFiles/check_rslt.dir/all:
+	$(MAKE) -f chapter3/CMakeFiles/check_rslt.dir/build.make chapter3/CMakeFiles/check_rslt.dir/depend
+	$(MAKE) -f chapter3/CMakeFiles/check_rslt.dir/build.make chapter3/CMakeFiles/check_rslt.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles --progress-num=9,10 "Built target check_rslt"
+.PHONY : chapter3/CMakeFiles/check_rslt.dir/all
+
+# Build rule for subdir invocation for target.
+chapter3/CMakeFiles/check_rslt.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 chapter3/CMakeFiles/check_rslt.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hange/Learn/BasicAlgorithmTest/build/CMakeFiles 0
+.PHONY : chapter3/CMakeFiles/check_rslt.dir/rule
+
+# Convenience name for target.
+check_rslt: chapter3/CMakeFiles/check_rslt.dir/rule
+
+.PHONY : check_rslt
+
+# clean rule for target.
+chapter3/CMakeFiles/check_rslt.dir/clean:
+	$(MAKE) -f chapter3/CMakeFiles/check_rslt.dir/build.make chapter3/CMakeFiles/check_rslt.dir/clean
+.PHONY : chapter3/CMakeFiles/check_rslt.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hange/Learn/BasicAlgorithmTest/chapter2/chapter2.cpp
+stdint.h
+-
+iostream
+-
+unordered_set
+-
+g2o/core/optimization_algorithm_factory.h
+/home/hange/Learn/BasicAlgorithmTest/chapter2/g2o/core/optimization_algorithm_factory.h
+g2o/core/robust_kernel_impl.h
+/home/hange/Learn/BasicAlgorithmTest/chapter2/g2o/core/robust_kernel_impl.h
+g2o/core/sparse_optimizer.h
+/home/hange/Learn/BasicAlgorithmTest/chapter2/g2o/core/sparse_optimizer.h
+g2o/solvers/structure_only/structure_only_solver.h
+/home/hange/Learn/BasicAlgorithmTest/chapter2/g2o/solvers/structure_only/structure_only_solver.h
+g2o/stuff/sampler.h
+/home/hange/Learn/BasicAlgorithmTest/chapter2/g2o/stuff/sampler.h
+g2o/types/sba/types_six_dof_expmap.h
+/home/hange/Learn/BasicAlgorithmTest/chapter2/g2o/types/sba/types_six_dof_expmap.h
+

@@ -123,6 +123,58 @@ chapter1_total/fast:
 	$(MAKE) -f chapter1/CMakeFiles/chapter1_total.dir/build.make chapter1/CMakeFiles/chapter1_total.dir/build
 .PHONY : chapter1_total/fast
 
+#=============================================================================
+# Target rules for targets named chapter2_g2o_BA
+
+# Build rule for target.
+chapter2_g2o_BA: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chapter2_g2o_BA
+.PHONY : chapter2_g2o_BA
+
+# fast build rule for target.
+chapter2_g2o_BA/fast:
+	$(MAKE) -f chapter2/CMakeFiles/chapter2_g2o_BA.dir/build.make chapter2/CMakeFiles/chapter2_g2o_BA.dir/build
+.PHONY : chapter2_g2o_BA/fast
+
+#=============================================================================
+# Target rules for targets named chapter2_iter
+
+# Build rule for target.
+chapter2_iter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chapter2_iter
+.PHONY : chapter2_iter
+
+# fast build rule for target.
+chapter2_iter/fast:
+	$(MAKE) -f chapter2/CMakeFiles/chapter2_iter.dir/build.make chapter2/CMakeFiles/chapter2_iter.dir/build
+.PHONY : chapter2_iter/fast
+
+#=============================================================================
+# Target rules for targets named chapter2_g2o_curve_fitting
+
+# Build rule for target.
+chapter2_g2o_curve_fitting: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chapter2_g2o_curve_fitting
+.PHONY : chapter2_g2o_curve_fitting
+
+# fast build rule for target.
+chapter2_g2o_curve_fitting/fast:
+	$(MAKE) -f chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/build.make chapter2/CMakeFiles/chapter2_g2o_curve_fitting.dir/build
+.PHONY : chapter2_g2o_curve_fitting/fast
+
+#=============================================================================
+# Target rules for targets named check_rslt
+
+# Build rule for target.
+check_rslt: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 check_rslt
+.PHONY : check_rslt
+
+# fast build rule for target.
+check_rslt/fast:
+	$(MAKE) -f chapter3/CMakeFiles/check_rslt.dir/build.make chapter3/CMakeFiles/check_rslt.dir/build
+.PHONY : check_rslt/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -132,6 +184,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... chapter1_total"
+	@echo "... chapter2_g2o_BA"
+	@echo "... chapter2_iter"
+	@echo "... chapter2_g2o_curve_fitting"
+	@echo "... check_rslt"
 .PHONY : help
 
 
